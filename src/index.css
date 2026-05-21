@@ -3,7 +3,8 @@
 
 @theme {
   /* COLORS */
-  --color-primary: #265e55;
+  --color-lightPrimary: #9AF590;
+  --color-primary: #6BDE5D;
   --color-light: #ffffff;
   --color-dark: #000201;
 
