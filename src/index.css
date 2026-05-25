@@ -5,8 +5,10 @@
   /* COLORS */
   --color-lightPrimary: #9AF590;
   --color-primary: #6BDE5D;
+  --color-secondary: #90F5B8;
   --color-light: #ffffff;
   --color-dark: #000201;
+  --color-gray: #A69F9F;
 
   /* FONTS */
   --font-primary: "Poppins", sans-serif;
