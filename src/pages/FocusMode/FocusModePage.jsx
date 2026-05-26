@@ -1,10 +1,8 @@
 function FocusModePage() {
   return (
-    <section>
-        <div className="container">
-              <h2>Focus Mode</h2>
-        </div>
-      </section>
+      <div>
+          <h2>Focus Mode</h2>
+      </div>
   )
 }
 

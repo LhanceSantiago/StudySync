@@ -1,10 +1,8 @@
 function SettingsPage() {
   return (
-    <section>
-        <div className="container">
-              <h2>Settings</h2>
-        </div>
-      </section>
+    <div>
+          <h2>Settings</h2>
+    </div>
   )
 }
 

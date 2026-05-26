@@ -6,6 +6,12 @@
   --color-lightPrimary: #9AF590;
   --color-primary: #6BDE5D;
   --color-secondary: #90F5B8;
+
+
+  /* colors not final */
+  --color-bg: #E6EDE1;
+  --color-button: #DBD5A4;
+
   --color-light: #ffffff;
   --color-dark: #000201;
   --color-gray: #A69F9F;
@@ -18,7 +24,13 @@ html {
 }
 .container {
   width: 100%;
-  max-width: 1500px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 5rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
 }

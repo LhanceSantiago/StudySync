@@ -1,10 +1,8 @@
 function TasksPage() {
   return (
-    <section>
-        <div className="container">
-              <h2>Tasks</h2>
-        </div>
-      </section>
+    <div>
+      <h2>Tasks</h2>
+    </div>
   )
 }
 

@@ -1,10 +1,8 @@
 function InsightsPage() {
   return (
-    <section>
-        <div className="container">
+    <div>
               <h2>Insights</h2>
-        </div>
-      </section>
+      </div>
   )
 }
 

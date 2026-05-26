@@ -1,10 +1,8 @@
 function HomePage() {
   return (
-    <section>
-    <div className="container">
-          <h2>Home</h2>
+    <div className="bg-bg text-center">
+          <h1>sdasd</h1>
     </div>
-  </section>
   )
 }
 
