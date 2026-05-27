@@ -1,36 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import "tailwindcss";
 
+
 @theme {
+  /* FONTS */
+  --font-primary: "Poppins", sans-serif;
+
   /* COLORS */
   --color-lightPrimary: #9AF590;
   --color-primary: #6BDE5D;
   --color-secondary: #90F5B8;
-
-
-  /* colors not final */
+  --color-tertiary: #DBD5A4;
+  --color-bright: #D45113;
   --color-bg: #E6EDE1;
-  --color-button: #DBD5A4;
 
   --color-light: #ffffff;
   --color-dark: #000201;
   --color-gray: #A69F9F;
-
-  /* FONTS */
-  --font-primary: "Poppins", sans-serif;
 }
-html {
-  font-family: "Poppins", sans-serif;
-}
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+@layer base {
+  body  {
+    @apply font-primary text-dark
+  }
 }
 
-@media (min-width: 1024px) {
-  .container {
-    padding: 0 2rem;
+@layer components {
+  .btn {
+      @apply inline-block px-8 py-3 bg-transparent border border-transparent transition-all duration-500 ease-in-out text-center font-semibold text-sm text-light rounded-xl
+  }
+  .primary {
+      @apply bg-primary hover:bg-lightPrimary text-light 
+  }
+  .secondary {
+      @apply bg-bg border-primary text-primary hover:bg-primary hover:text-light hover:border-light
+  }
+  .tertiary {
+    @apply  border-bright text-light hover:bg-bright hover:text-light 
   }
 }

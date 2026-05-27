@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
+import LandingPage from "./pages/Landing/LandingPage"
+
 import DashboardLayout from "./components/layout/DashboardLayout"
 
 import Home from "./pages/Home/HomePage"
@@ -13,6 +15,12 @@ function App() {
   return (
     <>
      <Routes>
+      {/* Landing Page */}
+      <Route path="/" element={<LandingPage />} />
+
+      {/* Auth */}
+
+      {/* Dashboard */}
       <Route element={<DashboardLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/tasks" element={<Tasks />} />
