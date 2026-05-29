@@ -10,6 +10,7 @@ import FocusMode from "./pages/FocusMode/FocusModePage"
 import Insights from "./pages/Insights/InsightsPage"
 import Notes from "./pages/Notes/NotesPage"
 import Settings from "./pages/Settings/SettingsPage"
+import HomePage from "./pages/Home/HomePage"
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
 
       {/* Dashboard */}
       <Route element={<DashboardLayout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/focus" element={<FocusMode />} />
         <Route path="/insights" element={<Insights />} />

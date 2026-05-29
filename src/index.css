@@ -12,13 +12,16 @@
   --color-secondary: #90F5B8;
   --color-tertiary: #DBD5A4;
   --color-bright: #D45113;
-  --color-bg: #E6EDE1;
+  --color-bg: #F0F0ED;
 
   --color-light: #ffffff;
   --color-dark: #000201;
   --color-gray: #A69F9F;
 }
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
   body  {
     @apply font-primary text-dark
   }
@@ -26,15 +29,15 @@
 
 @layer components {
   .btn {
-      @apply inline-block px-8 py-3 bg-transparent border border-transparent transition-all duration-500 ease-in-out text-center font-semibold text-sm text-light rounded-xl
+    @apply inline-block px-8 py-3 bg-transparent border border-transparent transition-all duration-500 ease-in-out text-center font-semibold text-sm text-light rounded-xl
   }
-  .primary {
-      @apply bg-primary hover:bg-lightPrimary text-light 
+  .btn-primary {
+    @apply bg-primary hover:bg-lightPrimary text-light 
   }
-  .secondary {
-      @apply bg-bg border-primary text-primary hover:bg-primary hover:text-light hover:border-light
+  .btn-secondary {
+    @apply bg-bg border-primary text-primary hover:bg-primary hover:text-light hover:border-light
   }
-  .tertiary {
-    @apply  border-bright text-light hover:bg-bright hover:text-light 
+  .btn-tertiary {
+    @apply border-bright text-light hover:bg-bright hover:text-light 
   }
 }

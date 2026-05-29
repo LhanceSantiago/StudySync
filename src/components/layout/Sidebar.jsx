@@ -66,7 +66,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
         <div className="flex flex-col gap-2">
 
-          <NavLink className={navClass} to="/" onClick={closeSidebar}>
+          <NavLink className={navClass} to="/home" onClick={closeSidebar}>
             <House />
             Home
           </NavLink>

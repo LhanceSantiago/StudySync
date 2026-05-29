@@ -3,8 +3,7 @@ import logo from "/logo.png"
 function Header({ isSidebarOpen, setIsSidebarOpen }) {
 
   return (
-    <section className="py-5 border-primary border-b-4 lg:hidden">
-      <div className="container">
+    <section className="p-5 border-primary border-b-4 lg:hidden">
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
                 <img src={logo} alt="logo" className="w-12"/>
@@ -17,7 +16,6 @@ function Header({ isSidebarOpen, setIsSidebarOpen }) {
           >
           </div>
         </div>
-      </div>
     </section>
   )
 }

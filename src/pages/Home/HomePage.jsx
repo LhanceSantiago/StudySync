@@ -1,5 +1,4 @@
 function HomePage() {
-
   const today = new Date()
 
   const formattedDate = today.toLocaleDateString("en-US", {
@@ -101,9 +100,7 @@ function HomePage() {
         </p>
 
       </div>
-
     </section>
   )
 }
-
 export default HomePage
