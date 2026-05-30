@@ -1,4 +1,7 @@
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { NavLink } from "react-router-dom"
+import { supabase } from "../../supabase/client"
 import logo from "/logo.png"
 
 import {
@@ -7,13 +10,17 @@ import {
   Timer,
   ChartNoAxesCombined,
   Settings,
-  BriefcaseBusiness
+  BriefcaseBusiness,
+  LogOut
 } from "lucide-react"
 
 function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
+  const navigate = useNavigate()
+  const [showLogoutModal, setShowLogoutModal] = useState(false)
+
   function closeSidebar() {
-    setIsSidebarOpen(false)
+      setIsSidebarOpen(false)
   }
 
   const navClass = ({ isActive }) =>
@@ -23,6 +30,15 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
         ? "bg-primary text-white shadow-lg shadow-primary/50"
         : "bg-white text-primary hover:shadow-lg"
     }`
+    // logout func
+      const handleLogout = async () => {
+
+    await supabase.auth.signOut()
+
+    setShowLogoutModal(false)
+
+    navigate("/")
+  }
 
   return (
 
@@ -93,16 +109,55 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
 
         </div>
 
-        <div className="border-t border-gray pt-5">
+        <div className="border-t border-gray pt-5 flex flex-col gap-5">
 
           <NavLink className={navClass} to="/settings" onClick={closeSidebar}>
             <Settings />
             Settings
           </NavLink>
 
+          <button className="btn btn-positive flex items-center justify-center gap-3" onClick={() => setShowLogoutModal(true)}>
+            <LogOut />Log out
+          </button>
+        
         </div>
 
       </nav>
+
+        {showLogoutModal && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 text-center">
+
+          <div className="bg-light px-10 py-8 rounded-xl shadow-lg flex flex-col gap-6">
+
+            <h3 className="text-lg font-bold text-primary">Confirm Logout</h3>
+
+            <p className="text-sm text-gray-500">Are you sure you want to log out?</p>
+
+            <div className="flex justify-center gap-3">
+
+              {/* CANCEL BUTTON */}
+              <button
+                className="btn btn-positive"
+                onClick={() => setShowLogoutModal(false)}
+              >
+                Cancel
+              </button>
+
+              {/* CONFIRM LOGOUT */}
+              <button
+                className="btn btn-negative flex items-center justify-center gap-3"
+                onClick={handleLogout}
+              >
+                <LogOut />Log out
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      )}
+
 
     </div>
   )

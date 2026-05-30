@@ -29,7 +29,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-8 py-3 bg-transparent border border-transparent transition-all duration-500 ease-in-out text-center font-semibold text-sm text-light rounded-xl
+    @apply inline-block px-8 py-3 bg-transparent border border-transparent transition-all duration-500 ease-in-out text-center font-semibold text-sm text-light rounded-xl cursor-pointer
   }
   .btn-primary {
     @apply bg-primary hover:bg-lightPrimary text-light 
@@ -39,5 +39,12 @@
   }
   .btn-tertiary {
     @apply border-bright text-light hover:bg-bright hover:text-light 
+  }
+  .btn-positive {
+    @apply border-primary text-primary hover:text-bright hover:border-bright
+  }
+  
+  .btn-negative {
+    @apply border-bright text-bright hover:text-primary hover:border-primary
   }
 }
